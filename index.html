@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <title>Mélody B.</title>
-        <meta charset="UTF-8">
-    </head>
+<html lang="fr-CA">
 
-    <body>
-        <h1>Bonjour! Bienvenue sur un site en construction. </h1>
-    </body>
+<head>
+    <title>Orogaland</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="hero">
+        <!-- particles.js container -->
+        <div id="particles-js"></div>
+
+        <div class="hero-texte">
+            <h1>Orogaland</h1>
+            <h2>À la découverte d'un nouveau monde</h2>
+            <div class="bouton">Visiter Orogaland</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="info">
+            <h3>Bienvenue sur Orogaland!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi, mollitia ad labore maxime sint maiores omnis tempore harum quis perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam corporis in reiciendis ducimus perferendis repellat laboriosam ullam officia nemo vero, minima sunt aut quibusdam incidunt accusamus reprehenderit tempora eius placeat?</p>
+        </div>
+    </div>
+
+    <div id="app" class="wrapper">
+        <div v-for="(blabla, index) in blablas">
+        <h3>{{ blabla.skin }}</h3>
+        <p v-if="blabla.disponible">Disponible</p>
+        <p v-else>Non disponible</p>
+        <p>{{ blabla.description }}</p>
+        <ul>
+            <li v-for="tag in blabla.tags">{{ tag }}</li>
+        </ul>
+        <img :src="blabla.image" alt="">
+        <a :href="blabla.url" target="_blank">Lire la suite</a>
+        <div v-for="variant in blabla.variants" :key="variant.id" @mouseover="updateImage(index, variant.image)">{{ variant.color }}</div>
+    </div>
+    </div>
+    <!-- import vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        const mountedApp = app.mount('#app');
+    </script>
+</body>
 
 </html>
