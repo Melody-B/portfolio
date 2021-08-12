@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  max-width: 1250px;
+  margin: 20px;
+}
+
+.hero {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-texte {
+  text-align: center;
+  color: #baf5f5;
+}
+
+.hero-texte h1 {
+  font-size: 60px;
+  font-family: "Chewy", cursive;
+  font-weight: normal;
+  margin: 0;
+}
+
+.hero-texte h2 {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+.bouton {
+  background-color: #baf5f5;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5e0782;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.bouton:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #5e0782;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+#particles-js canvas {
+  display: block;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+@media screen and (min-width: 600px) {
+  .hero-texte h1 {
+    font-size: 100px;
+  }
+  .wrapper {
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
