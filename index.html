@@ -1,62 +1,53 @@
 <!DOCTYPE html>
-
 <html lang="fr-CA">
 
 <head>
-    <title>Orogaland</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mélody Bédard | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Text:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
     <div class="hero">
-        <!-- particles.js container -->
         <div id="particles-js"></div>
-
-        <div class="hero-texte">
-            <h1>Orogaland</h1>
-            <h2>À la découverte d'un nouveau monde</h2>
-            <div class="bouton">Visiter Orogaland</button>
-            </div>
+        <div class="wrapper">
+           <div class="texte">
+            <h1>Mélody <br />Bédard-Martin</h1>
+            <h2>Étudiante en génie des TI</h2>
+            <!-- <a href="./ressources/melody_bedard-cv.pdf" target="_blank"><button type="button" class="btn btn-light">Voir mon CV</button></a> -->
         </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="info">
-            <h3>Bienvenue sur Orogaland!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi, mollitia ad labore maxime sint maiores omnis tempore harum quis perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam corporis in reiciendis ducimus perferendis repellat laboriosam ullam officia nemo vero, minima sunt aut quibusdam incidunt accusamus reprehenderit tempora eius placeat?</p>
+        <div class="photo">
+            <img class="collant" src="./ressources/cote1.png" alt="autocollant">
+            <img src="./ressources/melody-photo2.png" alt="Mélody Bédard">
+            <img class="collant" src="./ressources/cote2.png" alt="autocollant">
+        </div> 
         </div>
+        
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#FFD7F1" fill-opacity="1"
+                d="M0,256L34.3,256C68.6,256,137,256,206,213.3C274.3,171,343,85,411,53.3C480,21,549,43,617,85.3C685.7,128,754,192,823,197.3C891.4,203,960,149,1029,133.3C1097.1,117,1166,139,1234,170.7C1302.9,203,1371,245,1406,266.7L1440,288L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+            </path>
+        </svg> -->
     </div>
 
-    <div id="app" class="wrapper">
-        <div v-for="(blabla, index) in blablas">
-        <h3>{{ blabla.skin }}</h3>
-        <p v-if="blabla.disponible">Disponible</p>
-        <p v-else>Non disponible</p>
-        <p>{{ blabla.description }}</p>
-        <ul>
-            <li v-for="tag in blabla.tags">{{ tag }}</li>
-        </ul>
-        <img :src="blabla.image" alt="">
-        <a :href="blabla.url" target="_blank">Lire la suite</a>
-        <div v-for="variant in blabla.variants" :key="variant.id" @mouseover="updateImage(index, variant.image)">{{ variant.color }}</div>
-    </div>
-    </div>
-    <!-- import vue -->
-    <script src="https://unpkg.com/vue@next"></script>
-
+    <!-- bootsrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <script>
-        const mountedApp = app.mount('#app');
-    </script>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>
