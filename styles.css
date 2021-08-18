@@ -16,6 +16,21 @@ h2 {
   font-weight: medium;
 }
 
+h3 {
+  padding-top: 190px;
+}
+
+.icone {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.icone a {
+  position: fixed;
+}
+
 .btn-light {
   background-color: #ffd7f1;
   border-color: #ffd7f1;
@@ -27,11 +42,6 @@ h2 {
   border-color: #ffd7f1;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
-}
-
-.hero {
-  width: 100vw;
-  height: 100vh;
 }
 
 .hero #particles-js {
@@ -47,9 +57,9 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -62,7 +72,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  height: 60vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -81,8 +91,36 @@ h2 {
           animation: blob linear 10s infinite;
 }
 
-.hero .wrapper img {
-  display: none;
+.hero .wrapper .photo {
+  padding-top: 20px;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .wrapper .photo .photo-principale {
+  max-width: 70vw;
+  max-height: 35vh;
+}
+
+.hero .wrapper .photo .collant {
+  position: relative;
+  bottom: 20px;
+  right: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 3;
+}
+
+.hero .wrapper .photo .collant:first-of-type {
+  top: 30px;
+  left: 65%;
 }
 
 .hero svg {
@@ -124,25 +162,26 @@ h2 {
     margin-left: 30px;
     width: 65vw;
   }
-  .hero .wrapper img {
+  .hero .wrapper .photo {
+    padding-top: 0;
+    height: auto;
+  }
+  .hero .wrapper .photo .photo-principale {
+    width: auto;
+    max-height: unset;
+    max-width: unset;
+  }
+  .hero .wrapper .photo img {
     display: block;
     position: relative;
     width: 35vw;
     right: 30px;
   }
-  .hero .wrapper img.collant {
-    position: relative;
-    bottom: 30px;
+  .hero .wrapper .photo img.collant {
     right: 80px;
-    width: auto;
-    z-index: 3;
   }
-  .hero .wrapper img.collant:first-of-type {
-    top: 30px;
+  .hero .wrapper .photo img.collant:first-of-type {
     left: 60%;
-  }
-  .hero .wrapper svg {
-    height: 20vh;
   }
 }
 
@@ -246,14 +285,8 @@ h2 {
     font-size: 100px;
     margin: 60px 0 20px;
   }
-  .hero {
-    height: 60vh;
-  }
   .hero .wrapper {
     max-width: 1150px;
-  }
-  .hero svg {
-    top: 61vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */
