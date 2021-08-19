@@ -1,18 +1,58 @@
 body {
-  font-family: "Red Hat Text", sans-serif;
   background-color: #ffd7f1;
+  cursor: none;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+a {
+  cursor: none;
+}
+
+a:hover {
+  cursor: none;
+}
+
+#cursor {
+  position: absolute;
+  z-index: 20;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+  transition: background 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, -webkit-transform 0.3s;
+  border: 1.5px solid #7a405c;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(122, 64, 92, 0.4);
+  pointer-events: none;
+  -webkit-backdrop-filter: grayscale(1);
+          backdrop-filter: grayscale(1);
+}
+
+#cursor.lien {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  border-color: #fff9fc;
+  background-color: rgba(255, 249, 252, 0.4);
+  -webkit-backdrop-filter: hue-rotate(180deg);
+          backdrop-filter: hue-rotate(180deg);
 }
 
 h1 {
   color: #ffd7f1;
   font-family: "Bebas Neue", cursive;
-  font-size: 60px;
+  font-size: 55px;
   line-height: 95%;
 }
 
 h2 {
+  margin-bottom: 25px;
   color: #fff9fc;
-  margin-bottom: 50px;
+  font-size: 20px;
   font-weight: medium;
 }
 
@@ -33,24 +73,46 @@ h3 {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.btn-light {
+.icone a img {
+  width: 100%;
+}
+
+.icone.menu {
+  left: unset;
+  right: 70px;
+}
+
+.icone.menu a {
+  position: fixed;
+  color: #7a405c;
+}
+
+.icone.menu a span {
+  font-size: 50px;
+}
+
+.bouton {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 5px;
+  border: 1px solid #ffd7f1;
+  padding: 10px 20px;
   background-color: #ffd7f1;
-  border-color: #ffd7f1;
+  color: #06090e;
+  text-decoration: none;
   font-size: 20px;
 }
 
-.btn-light:hover {
-  background-color: #ffd7f1;
-  border-color: #ffd7f1;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+.bouton:hover {
+  background-color: #7a405c;
+  color: #fff9fc;
 }
 
 .hero #particles-js {
   position: absolute;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  z-index: -1;
   background-color: #06090e;
 }
 
@@ -74,7 +136,6 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 60vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -87,15 +148,14 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 30px;
-  background: no-repeat left/70% url(./ressources/blob.png);
   -webkit-animation: blob linear 10s infinite;
           animation: blob linear 10s infinite;
+  height: 60vh;
+  padding: 50px 20px;
+  background: no-repeat left/70% url(./ressources/blob.png);
 }
 
 .hero .wrapper .photo {
-  padding-top: 20px;
-  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,6 +163,8 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 40vh;
+  padding-top: 20px;
 }
 
 .hero .wrapper .photo .photo-principale {
@@ -114,31 +176,16 @@ h3 {
   position: relative;
   bottom: 20px;
   right: 50px;
+  z-index: 3;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 3;
+  max-height: 40px;
 }
 
 .hero .wrapper .photo .collant:first-of-type {
   top: 30px;
   left: 65%;
-}
-
-.hero svg {
-  height: auto;
-  width: 100vw;
-  -webkit-transform: scaleY(-1);
-          transform: scaleY(-1);
-  position: absolute;
-  bottom: 0;
-}
-
-.hero svg path {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: scaleX(4);
-          transform: scaleX(4);
 }
 
 @media (min-width: 768px) {
@@ -181,6 +228,7 @@ h3 {
   }
   .hero .wrapper .photo img.collant {
     right: 80px;
+    max-height: unset;
   }
   .hero .wrapper .photo img.collant:first-of-type {
     left: 60%;
@@ -267,8 +315,8 @@ h3 {
     width: unset;
   }
   .hero .wrapper img {
-    width: unset;
     position: unset;
+    width: unset;
   }
   .hero .wrapper img.collant {
     right: 50px;
@@ -276,16 +324,12 @@ h3 {
   .hero .wrapper img.collant:first-of-type {
     left: 72%;
   }
-  .hero .wrapper svg {
-    top: 70vh;
-    bottom: unset;
-  }
 }
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 100px;
     margin: 60px 0 20px;
+    font-size: 100px;
   }
   .hero .wrapper {
     max-width: 1150px;
