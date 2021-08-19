@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Text:wght@400;500&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
@@ -18,27 +19,35 @@
 
 <body>
 
-    <div class="icone">
-        <a href="./index.html">
+    <div id="cursor"></div>
+
+    <div class="icone logo">
+        <a class="lien-cursor" href="./index.html">
             <img src="./ressources/icone.png" alt="logo">
+        </a>
+    </div>
+
+    <div class="icone menu">
+        <a class="lien-cursor" href="#">
+            <span class="material-icons">menu</span>
         </a>
     </div>
 
     <div class="hero">
         <div id="particles-js"></div>
         <div class="wrapper">
-           <div class="texte">
-            <h1>Mélody <br />Bédard-Martin</h1>
-            <h2>Étudiante en génie des TI</h2>
-            <!-- <a href="./ressources/melody_bedard-cv.pdf" target="_blank"><button type="button" class="btn btn-light">Voir mon CV</button></a> -->
+            <div class="texte">
+                <h1>Mélody <br />Bédard-Martin</h1>
+                <h2>Étudiante en génie des TI</h2>
+                <a class="lien-cursor bouton" href="./ressources/melody_bedard-cv.pdf" target="_blank">Voir mon CV</a>
+            </div>
+            <div class="photo">
+                <img class="collant" src="./ressources/cote1.png" alt="autocollant">
+                <img class="photo-principale" src="./ressources/melody.png" alt="Mélody Bédard">
+                <img class="collant" src="./ressources/cote2.png" alt="autocollant">
+            </div>
         </div>
-        <div class="photo">
-            <img class="collant" src="./ressources/cote1.png" alt="autocollant">
-            <img class="photo-principale" src="./ressources/melody.png" alt="Mélody Bédard">
-            <img class="collant" src="./ressources/cote2.png" alt="autocollant">
-        </div> 
-        </div>
-        
+
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#FFD7F1" fill-opacity="1"
                 d="M0,256L34.3,256C68.6,256,137,256,206,213.3C274.3,171,343,85,411,53.3C480,21,549,43,617,85.3C685.7,128,754,192,823,197.3C891.4,203,960,149,1029,133.3C1097.1,117,1166,139,1234,170.7C1302.9,203,1371,245,1406,266.7L1440,288L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
@@ -48,13 +57,20 @@
 
     <div>
         <h3>Mes compétences</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda perspiciatis minima, vero sint facilis eligendi quis ad, dignissimos quia, consectetur minus similique. Adipisci eveniet iste asperiores assumenda nulla error ratione sed dignissimos nam voluptate, tenetur consequatur minus et delectus inventore quo qui. Obcaecati, eius.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda perspiciatis minima, vero sint
+                facilis eligendi quis ad, dignissimos quia, consectetur minus similique. Adipisci eveniet iste
+                asperiores assumenda nulla error ratione sed dignissimos nam voluptate, tenetur consequatur minus et
+                delectus inventore quo qui. Obcaecati, eius.</p>
     </div>
 
     <!-- bootsrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
